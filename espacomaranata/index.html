@@ -134,7 +134,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--a)
 .fab{position:fixed;right:18px;bottom:18px;z-index:20;display:flex;align-items:center;gap:10px;height:56px;padding:0 20px 0 16px;border-radius:99px;background:#25d366;color:#04230f;font-weight:800;font-size:14px;text-decoration:none;box-shadow:0 12px 30px rgba(0,0,0,.35);transform:translateY(110px);opacity:0;transition:transform .6s var(--ease),opacity .5s}
 .fab.show{transform:none;opacity:1}
 @media(max-width:420px){.fab span{display:none}.fab{padding:0 16px}.orbit{opacity:.5}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,h1 .w{opacity:1;transform:none;filter:none}.orbit .draw{stroke-dashoffset:0}.fab{opacity:1;transform:none}.stamp.on{opacity:1}}
+
 </style>
 </head>
 <body>
@@ -232,7 +232,7 @@ $('skipd').onclick=()=>{S.data=null;show(3)};
 /* mensagem */
 const fmt=d=>d?String(d.getDate()).padStart(2,'0')+"/"+String(d.getMonth()+1).padStart(2,'0')+"/"+d.getFullYear():"";
 function msg(){return "Olá! Vim pelo Instagram do "+EVENTO+".\n"+(S.nome?"Meu nome é "+S.nome+".\n":"")+"\nTipo de evento: "+S.tipo+"\nNúmero de pessoas: "+S.pessoas+"\nData desejada: "+(fmt(S.data)||"ainda não definida")+(S.duvida?"\n\nDúvida: "+S.duvida:"\n\nPoderiam me enviar as opções e valores?")}
-let tm;function type(){clearTimeout(tm);const t=msg();let i=0;const el=$('msgv');el.textContent='';const matchMedia_=matchMedia('(prefers-reduced-motion:reduce)').matches;if(matchMedia_){el.textContent=t;return}(function k(){el.textContent=t.slice(0,i);i+=2;if(i<=t.length+1)tm=setTimeout(k,16)})()}
+let tm;function type(){clearTimeout(tm);const t=msg();let i=0;const el=$('msgv');el.textContent='';const matchMedia_=matchMedia('(prefers-reduced-motion:reduce)').matches;(function k(){el.textContent=t.slice(0,i);i+=2;if(i<=t.length+1)tm=setTimeout(k,16)})()}
 function upd(){$('msgv').textContent=msg()}
 $('nome').oninput=e=>{S.nome=e.target.value.trim();S.nome?setT($('tkNome'),S.nome):setT($('tkNome'),'—',true);clearTimeout(tm);upd()};
 $('duvida').oninput=e=>{S.duvida=e.target.value.trim();clearTimeout(tm);upd()};
