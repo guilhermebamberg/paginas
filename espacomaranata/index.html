@@ -12,7 +12,7 @@
 <style>
 :root{--bg:#0b1a12;--card:#12281c;--line:#24412f;--a:#d9b66a;--b:#b8913f;--c:#7fa98a;--text:#f5efdf;--muted:#a9b8a8;--ink:#15110e;--fh:'Cormorant Garamond',serif;--fb:'Jost',sans-serif;--hw:600;--ease:cubic-bezier(.2,.8,.2,1)}
 :root{--line:color-mix(in oklch,var(--text) 16%,transparent);--card:color-mix(in oklch,var(--bg) 90%,var(--text));--r-cal:20px;--p-cal:10px}
-body{min-height:100dvh}
+body{min-height:100vh;min-height:100dvh}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -41,7 +41,7 @@ h1 .w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(1.2deg);
 @keyframes word{to{opacity:1;transform:none;filter:none}}
 h1 em{font-style:italic;font-weight:600;color:var(--a);background:none;padding:0}
 .sub{position:relative;z-index:1;color:var(--muted);margin-top:30px;font-size:clamp(16px,2.2vw,19px);max-width:44ch}
-.cta{position:relative;z-index:1;display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:16px 26px;border-radius:99px;background:var(--a);color:var(--ink);border:0;font-weight:700;font-size:15px;text-decoration:none;transition:transform .35s var(--ease)}
+.cta svg{transition:transform .35s var(--ease),filter .2s}.cta:hover svg{transform:translateY(3px)}.cta{position:relative;z-index:1;display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:16px 26px;border-radius:99px;background:var(--a);color:var(--ink);border:0;font-weight:700;font-size:15px;text-decoration:none;transition:transform .35s var(--ease)}
 .cta svg{transition:transform .35s var(--ease)}
 .cta:hover svg{transform:translateY(4px)}
 .cta:active{transform:scale(.97)}
@@ -154,7 +154,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--a)
     <h1 id="h1">Seu casamento no <em>verde do Maranata</em></h1>
     <p class="sub">Cerimônia ao ar livre e salão decorado em Itapevi. Conta o tipo de evento e a data e a gente responde.</p>
     <a class="cta" href="#montar">Montar minha consulta
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M5 13l7 7 7-7"/></svg></a>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M5 13l7 7 7-7"/></svg></a>
   </section>
 
   <div class="strip" aria-hidden="true"><div><span>Casamento</span><span>Cerimônia ao ar livre</span><span>Pré-wedding</span><span>Aniversário</span><span>Casamento</span><span>Cerimônia ao ar livre</span><span>Pré-wedding</span><span>Aniversário</span><span>Casamento</span><span>Cerimônia ao ar livre</span><span>Pré-wedding</span><span>Aniversário</span><span>Casamento</span><span>Cerimônia ao ar livre</span><span>Pré-wedding</span><span>Aniversário</span></div></div>
